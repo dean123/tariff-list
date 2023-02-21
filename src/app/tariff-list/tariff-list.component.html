@@ -1,3 +1,16 @@
+<div class="header">
+  <h1>All Tariffs</h1>
+  <select
+    name="sortby"
+    id="sortby"
+    (change)="onSortChange($event)"
+  >
+    <option value="">Sort By</option>
+    <option value="upload">Upload Speed</option>
+    <option value="download">Download Speed</option>
+    <option value="price">Price</option>
+  </select>
+</div>
 <div>
   <app-list-item
     *ngFor="let item of tariffs"

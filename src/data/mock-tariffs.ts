@@ -38,7 +38,7 @@ const tariffs: Tariff[] = [
     name: 'Tariff Four',
     price: 20.3,
     uploadSpeed: 3,
-    downloadSpeed: 6,
+    downloadSpeed: 32,
     benefits: [
       'Benefit 1',
       'Benefit 2',

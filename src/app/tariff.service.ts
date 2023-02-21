@@ -6,11 +6,24 @@ import { Tariff } from './tariff';
 @Injectable({
   providedIn: 'root'
 })
+
 export class TariffService {
 
   constructor() { }
 
-  getTariffs(): Tariff[] {
-    return mockTariffs;
+  async getTariffs(sortBy: string | null): Promise<Tariff[]> {
+    if (sortBy) {
+      return mockTariffs.sort((a: Tariff, b: Tariff) => {
+        if (sortBy == 'price') {
+          return a.price - b.price;
+        } else if (sortBy == 'download') {
+          return b.downloadSpeed - a.downloadSpeed;
+        } else {
+          return b.uploadSpeed - a.uploadSpeed;
+        }
+      });
+    } else {
+      return mockTariffs;
+    }
   }
 }

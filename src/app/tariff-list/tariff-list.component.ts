@@ -7,16 +7,22 @@ import { TariffService } from '../tariff.service';
   templateUrl: './tariff-list.component.html',
   styleUrls: ['./tariff-list.component.scss']
 })
+
 export class TariffListComponent {
   tariffs: Tariff[] = [];
 
   constructor(private tariffService: TariffService) {}
 
-  getTariffs(): void {
-    this.tariffs = this.tariffService.getTariffs();
+  async getTariffs(sortBy: string | null): Promise<void> {
+    this.tariffs = await this.tariffService.getTariffs(sortBy);
   }
 
   ngOnInit(): void {
-    this.getTariffs();
+    this.getTariffs(null);
+  }
+
+  onSortChange(event: Event): void {
+    const target = event.target as HTMLSelectElement;
+    this.getTariffs(target.value);
   }
 }

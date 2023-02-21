@@ -1,0 +1,12 @@
+<div class="traffic">
+  <span class="traffic__label">
+    {{ type }}
+  </span>
+  <div>
+    <span class="traffic__icon" *ngIf="type == 'upload'; else elseBlock">↑</span>
+    <ng-template #elseBlock>
+      <span class="traffic__icon">↓</span>
+    </ng-template>
+    <span class="traffic__speed">{{ speed }} Mbit/s</span>
+  </div>
+</div>

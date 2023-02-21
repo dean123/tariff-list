@@ -1,26 +1,26 @@
 <section class="item">
   <div>
-    <h2 class="item__headline">Tarif Name</h2>
+    <h2 class="item__headline">{{ tariff.name }}</h2>
   </div>
   <div>
     <app-traffic-status
       [type]="'download'"
-      [speed]="12"
+      [speed]="tariff.downloadSpeed"
       ></app-traffic-status>
       <app-traffic-status
       [type]="'upload'"
-      [speed]="6"
+      [speed]="tariff.uploadSpeed"
     ></app-traffic-status>
   </div>
   <div>
     <ul>
-      <li>Benefit 1</li>
-      <li>Benefit 2</li>
-      <li>Benefit 3</li>
+      <li *ngFor="let benefit of tariff.benefits">
+        {{ benefit }}
+      </li>
     </ul>
   </div>
   <div class="item__cta">
-    <span class="item__price">123,20€</span>
+    <span class="item__price">{{ tariff.price.toFixed(2) }}€</span>
     <button>Zum Tarif</button>
   </div>
 </section>

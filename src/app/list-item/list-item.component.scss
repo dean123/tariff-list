@@ -3,7 +3,17 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 2rem;
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__headline {
+    margin: 0;
+  }
 
   &__price {
     display: block;

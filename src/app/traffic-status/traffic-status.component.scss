@@ -17,3 +17,7 @@
     border-bottom-right-radius: 25px;
   }
 }
+
+:host:last-child .traffic {
+  margin-bottom: 0;
+}

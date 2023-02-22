@@ -10,15 +10,20 @@
   }
 
   &__icon, &__speed {
-    border: 1px solid black;
     display: inline-block;
-    line-height: 1rem;
-    padding: 0.5rem 2rem;
+    
+    @media only screen and (min-width: 425px) {
+      border: 1px solid black;
+      line-height: 1rem;
+      padding: 0.5rem 2rem;
+    }
   }
   
   &__speed {
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    @media only screen and (min-width: 425px) {
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
   }
 }
 

@@ -11,6 +11,26 @@
     }
   }
 
+  &__button {
+    @media only screen and (max-width: 650px) {
+      padding: 0.5rem 1rem;
+    }
+
+    &::after {
+      content: ">";
+
+      @media only screen and (min-width: 650px) {
+        margin-left: 1rem;
+      }
+    }
+
+    span {
+      @media only screen and (max-width: 650px) {
+        display: none;
+      }
+    }
+  }
+
   &__cta {
     display: flex;
     flex-direction: column;
@@ -19,13 +39,21 @@
 
   &__headline {
     margin: 0;
+
+    @media only screen and (max-width: 650px) {
+      font-size: medium;
+    }
   }
 
   &__price {
     display: block;
-    font-size: x-large;
+    font-size: medium;
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: right;
+    
+    @media only screen and (min-width: 650px) {
+      font-size: x-large;
+    }
   }
 }

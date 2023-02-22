@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { TariffListItemComponent } from '../list-item/tariff-list-item.component';
 import { TariffListComponent } from './tariff-list.component';
 
 describe('TariffListComponent', () => {
@@ -8,7 +9,7 @@ describe('TariffListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TariffListComponent ]
+      declarations: [ TariffListComponent, TariffListItemComponent ]
     })
     .compileComponents();
 

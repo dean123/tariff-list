@@ -3,7 +3,24 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem 1.5rem 3rem;
+  position: relative;
+
+  &__id {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2rem;
+
+    @media only screen and (min-width: 650px) {
+      border-right: 1px solid black;
+    }
+  }
 
   &__benefits {
     @media only screen and (max-width: 768px) {

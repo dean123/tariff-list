@@ -3,10 +3,10 @@ import { Tariff } from '../tariff';
 
 @Component({
   selector: 'app-list-item',
-  templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.scss']
+  templateUrl: './tariff-list-item.component.html',
+  styleUrls: ['./tariff-list-item.component.scss']
 })
-export class ListItemComponent {
+export class TariffListItemComponent {
   @Input() tariff!: Tariff;
 
 }
